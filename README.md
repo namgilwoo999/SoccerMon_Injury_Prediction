@@ -5,8 +5,6 @@
 
 > 도메인 지식 기반 머신러닝을 활용한 축구 선수 부상 예측 시스템
 
----
-
 ## Problem Statement
 
 ### Background
@@ -55,14 +53,14 @@ conda create -n soccermon python=3.9
 conda activate soccermon
 pip install -r requirements.txt
 
-# 2. 데이터 전처리 (최초 1회만)
+# 2. 데이터 전처리
 python scripts/preprocessing/fix_injury_data.py
 python scripts/preprocessing/fix_data_split.py
 
-# 3. 모델 훈련 (모든 결과 생성)
+# 3. 모델 훈련
 python scripts/train.py
 
-# 4. 시각화 생성 (선택사항)
+# 4. 시각화 생성
 python scripts/visualization/paper_figures.py
 python scripts/visualization/feature_importance.py
 python scripts/visualization/ensemble_analysis.py
@@ -118,13 +116,13 @@ SoccerMon_Injury_Prediction/
 
 ## 작업 흐름
 
-### 1. 데이터 전처리 (최초 1회만)
+### 1. 데이터 전처리
 ```bash
 python scripts/preprocessing/fix_injury_data.py
 python scripts/preprocessing/fix_data_split.py
 ```
 
-### 2. 모델 훈련 (메인 단계)
+### 2. 모델 훈련
 ```bash
 python scripts/train.py
 ```
@@ -136,7 +134,7 @@ python scripts/train.py
 - 상위 5개 앙상블 생성
 - 모든 결과를 `results/ml_optimized/`에 저장
 
-### 3. 시각화 (선택사항)
+### 3. 시각화
 ```bash
 # 저장된 결과로부터 논문 품질 그림 생성
 python scripts/visualization/paper_figures.py
@@ -214,6 +212,6 @@ MIT License - 자세한 내용은 LICENSE 파일 참조
   title={SoccerMon Injury Prediction System},
   author={SoccerMon Team},
   year={2024},
-  url={https://github.com/YOUR_USERNAME/SoccerMon-Injury-Prediction}
+  url={https://github.com/namgilwoo999/SoccerMon-Injury-Prediction}
 }
 ```
