@@ -1,0 +1,77 @@
+# Python cache and bytecode
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual environments
+env/
+venv/
+ENV/
+.venv
+virtualenv/
+
+# IDE settings
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# Jupyter Notebook
+.ipynb_checkpoints
+*.ipynb_checkpoints
+
+# Trained model files (reproducible - large files)
+models/**/*.pkl
+models/**/*.joblib
+
+# Generated result files (reproducible)
+results/**/*.csv
+results/**/*.json
+results/**/*.md
+
+# Generated visualizations (reproducible)
+figures/**/*.png
+figures/**/*.ipynb
+
+# Log files
+*.log
+
+# Temporary and backup files
+*.bak
+*.tmp
+*.temp
+data/processed/*.bak
+data/processed/backup/
+
+# Raw data (large files - manage separately)
+data/raw/
+
+# OS related
+.AppleDouble
+.LSOverride
+desktop.ini
+
+# Personal files (not for GitHub)
+나만보는_*.md
+*_개인용.md
+PERSONAL_*.md

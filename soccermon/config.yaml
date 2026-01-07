@@ -1,0 +1,41 @@
+data:
+  raw_path: 'data/raw'
+  processed_path: 'data/processed'
+  test_size: 0.2
+  validation_size: 0.15
+
+features:
+  max_features: 20  # 증가
+  domain_features: true
+  interaction_features: true
+  temporal_features: true
+  
+models:
+  use_ensemble: true
+  cross_validation_folds: 5
+  early_stopping: true
+  # 불균형 데이터 처리 설정 (개선)
+  smote_ratio: 0.7
+  sampling_strategy: 'combined'  # SMOTETomek 사용
+  optimize_for: 'f2'  # F2 score 최적화 (Recall 중시)
+  
+  # 모델별 설정
+  scale_pos_weight: 10  # XGBoost/LightGBM 양성 클래스 가중치
+  class_weight_multiplier: 2.0  # 추가 클래스 가중치 배수
+
+output:
+  results: 'results/ml_optimized'
+  models: 'models/ml_optimized'  
+  figures: 'figures/ml_optimized'
+  
+# 로깅 설정
+logging:
+  level: 'INFO'
+  format: '%(asctime)s - %(levelname)s - %(message)s'
+  
+# 성능 임계값
+performance_thresholds:
+  min_f1: 0.4  # 최소 F1 score
+  min_precision: 0.5  # 최소 Precision
+  min_recall: 0.5  # 최소 Recall
+  max_overfitting_gap: 0.15  # 최대 과적합 갭
