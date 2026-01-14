@@ -176,11 +176,9 @@ class OptimizedMLPipeline:
             else:
                 # 데이터가 비어있으면 에러
                 raise FileNotFoundError(
-                    "원본 데이터를 찾을 수 없습니다. "
-                    "다음을 확인하세요:
-"
-                    "1. data/processed/master_dataset.csv 존재 여부
-"
+                    "원본 데이터를 찾을 수 없습니다.\n"
+                    "다음을 확인하세요:\n"
+                    "1. data/processed/master_dataset.csv 존재 여부\n"
                     "2. data/raw/ 폴더에 원본 데이터 존재 여부"
                 )
         
