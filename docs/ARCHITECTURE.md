@@ -238,25 +238,6 @@ figures/ml_optimized/
 └── *.png                    # 시각화
 ```
 
----
-
-## Git 작업 흐름
-
-### Git에 포함:
-- 소스 코드 (`soccermon/`, `scripts/`)
-- 설정 파일 (`soccermon/config.yaml`)
-- 문서 (`docs/`, `README.md`)
-- 의존성 (`requirements.txt`)
-- 전처리 데이터 (`data/processed/`)
-
-### Git에서 제외 (`.gitignore`):
-- 원시 데이터 (`data/raw/`) - 용량이 너무 큼
-- 훈련된 모델 (`models/`) - 재현 가능
-- 결과 (`results/`) - 재현 가능
-- 그림 (`figures/`) - 재현 가능
-- Python 캐시 (`__pycache__/`)
-
----
 
 ## 설계 결정
 
@@ -280,8 +261,3 @@ figures/ml_optimized/
 - **scripts/**: 실행 진입점 (실행 가능)
 - 표준 Python 프로젝트 구조를 따름
 - 코드 구성과 발견성 향상
-
----
-
-**버전**: 4.0 (GitHub용 재구성)
-**최종 업데이트**: 2024-12-31
